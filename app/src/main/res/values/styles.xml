@@ -1,0 +1,41 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary theme color of the app (sets background color of app bar) -->
+        <item name="colorPrimary">#1565C0</item>
+        <!-- Background color of buttons in the app -->
+        <item name="colorButtonNormal">#d1d1d1</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">2dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/transparentLine</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="BTNTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorButtonNormal">#2e7d32</item>
+    </style>
+
+    <style name="BTNThemeYel" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorButtonNormal">#ffea00</item>
+    </style>
+
+    <style name="BTNThemeRed">
+        <item name="colorButtonNormal">#bf360c</item>
+    </style>
+
+    <style name="buttonStdMargin">
+        <item name="android:layout_marginBottom">@dimen/btnMarginBottom</item>
+        <item name="android:layout_marginLeft">@dimen/btnMarginLeft</item>
+        <item name="android:layout_marginRight">@dimen/btnMarginRight</item>
+    </style>
+
+    <style name="cardScorePadMar">
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:text">@string/startScore</item>
+    </style>
+</resources>

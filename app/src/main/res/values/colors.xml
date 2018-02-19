@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorYellow">#FFEA00</color>
+    <color name="colorRed">#F44336</color>
+    <color name="colorBoard">#f5f5f5</color>
+    <color name="teamCol">#d9d9d9</color>
+    <color name="blkCol">#212121</color>
+    <color name="scoreCol">#ffffff</color>
+    <color name="transparentLine">#1adcdcdc</color>
+    </resources>

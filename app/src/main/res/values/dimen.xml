@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btnMarginBottom">8dp</dimen>
+    <dimen name="btnMarginLeft">24dp</dimen>
+    <dimen name="btnMarginRight">24dp</dimen>
+    <dimen name="teamTextSize">14sp</dimen>
+    <dimen name="largeScoreTextSize">56sp</dimen>
+    <dimen name="cardScoreTextSize">26sp</dimen>
+    <dimen name="cardTextMarginBottom">14dp</dimen>
+    <dimen name="margin2dp">2dp</dimen>
+</resources>

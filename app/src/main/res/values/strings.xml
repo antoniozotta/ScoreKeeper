@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="teamb">Team B</string>
+    <string name="teama">Team A</string>
+    <string name="startScore">0</string>
+    <string name="goal">Goal!</string>
+    <string name="yellowCard">Yellow Card</string>
+    <string name="redCard">Red Card</string>
+    <string name="reset">reset</string>
+    <string name="yellowCards">Yellow Cards</string>
+    <string name="redCards">Red Cards</string>
+</resources>
