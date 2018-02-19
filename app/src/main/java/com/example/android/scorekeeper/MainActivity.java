@@ -7,6 +7,12 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    static final String TEAM_A_SCORE = "scoreA";
+    static final String TEAM_B_SCORE = "scoreB";
+    static final String TEAM_A_YELLOWS = "yellowsA";
+    static final String TEAM_B_YELLOWS = "yellowsB";
+    static final String TEAM_A_REDS = "redsA";
+    static final String TEAM_B_REDS = "redsB";
     int scoreTeamA = 0;
     int scoreTeamB = 0;
     int teamAYellows = 0;
@@ -18,6 +24,35 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (savedInstanceState != null) {
+            //it is the first time the fragment is being called
+            scoreTeamA = savedInstanceState.getInt(TEAM_A_SCORE);
+            scoreTeamB = savedInstanceState.getInt(TEAM_B_SCORE);
+            teamAYellows = savedInstanceState.getInt(TEAM_A_YELLOWS);
+            teamBYellows = savedInstanceState.getInt(TEAM_B_YELLOWS);
+            teamAReds = savedInstanceState.getInt(TEAM_A_REDS);
+            teamBReds = savedInstanceState.getInt(TEAM_B_REDS);
+            displayForTeamA(scoreTeamA);
+            displayForTeamB(scoreTeamB);
+            displayYellowsTeamA(teamAYellows);
+            displayYellowsTeamB(teamBYellows);
+            displayRedsTeamA(teamAReds);
+            displayRedsTeamB(teamBReds);
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current game state
+        savedInstanceState.putInt(TEAM_A_SCORE, scoreTeamA);
+        savedInstanceState.putInt(TEAM_B_SCORE, scoreTeamB);
+        savedInstanceState.putInt(TEAM_A_YELLOWS, teamAYellows);
+        savedInstanceState.putInt(TEAM_B_YELLOWS, teamBYellows);
+        savedInstanceState.putInt(TEAM_A_REDS, teamAReds);
+        savedInstanceState.putInt(TEAM_B_REDS, teamBReds);
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
     }
 
     /**
@@ -48,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Team A.
      */
     public void displayForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
+        TextView scoreView = findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -56,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given red cards for Team A.
      */
     public void displayRedsTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_reds);
+        TextView scoreView = findViewById(R.id.team_a_reds);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -64,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given yellow cards for Team A.
      */
     public void displayYellowsTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_yellows);
+        TextView scoreView = findViewById(R.id.team_a_yellows);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -72,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Team B.
      */
     public void displayForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+        TextView scoreView = findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -80,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the red cards for Team B.
      */
     public void displayRedsTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_reds);
+        TextView scoreView = findViewById(R.id.team_b_reds);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -88,10 +123,9 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given yellow cards for Team B.
      */
     public void displayYellowsTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_yellows);
+        TextView scoreView = findViewById(R.id.team_b_yellows);
         scoreView.setText(String.valueOf(score));
     }
-
 
     /**
      * Increase yellow cards for Team B by 1 card.
